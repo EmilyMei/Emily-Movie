@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emily-movie</title>
+    <link rel="shortcut icon" href="Emily-movie.ico">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="../node_modules/Font-Awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/Font-Awesome/css/font-awesome-ie7.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/wap.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <script src="assets/js/swiper.animate.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="assets/js/index.js"></script>
+</head>
+
+<body ng-app="movie">
+    <!-- 顶部导航栏开始 -->
+    <div class="banner w" >
+        <div class="top-banner" ng-controller="mainController">
+            <div class="container">
+                <div class="top-banner-left fl">
+                    <i class="icon-leaf" aria-hidden="true"></i>Emily-Mei
+                </div>
+                <div class="top-banner-right fr">
+                    <form ng-submit='search()'>
+                        <input ng-model='query'  type="text" placeholder="search" value="search">
+                        <button>search</button>
+                    </form>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <h1>
+                        <a href="#/home_page">Emily-Movie</a>
+                    </h1>
+                </div>
+                <div class="top-nav">
+                    <nav class="navbar navbar-default">
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li auto-active="active"><a href="#/home_page">Home</a></li>
+                                <li auto-active="active"><a href="#/in_theaters">Showing</a></li><!--正在上映-->
+                                <li auto-active="active"><a href="#/coming_soon">Upcoming</a></li><!--即将上映-->
+                                <li auto-active="active"><a href="#/top250">Tops</a></li>
+                                <div class="clearfix"> </div>
+                            </ul>
+                        </div>
+                    </nav>
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- 顶部导航栏结束 -->
+
+
+    <div ng-view></div>
+
+    <script src="assets/js/prefixfree.min.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+
+    <script src="home_page/home_page.js"></script>
+    <script src="component/http-server.js"></script>
+    <script src="component/auto-active.js"></script>
+    <script src="details/details.js"></script>
+    <script src="list/list.js"></script>
+
+</body>
+
+</html>
+
+

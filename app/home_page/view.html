@@ -1,0 +1,103 @@
+<!--轮播图开始-->
+<div class="slider  ">
+    <div class="swiper-container " id="slider">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide"><img src="assets/img/slider1.jpg" ></div>
+            <div class="swiper-slide"><img src="assets/img/slider2.jpg" ></div>
+            <div class="swiper-slide"><img src="assets/img/slider3.jpg" ></div>
+            <div class="swiper-slide"><img src="assets/img/slider4.jpg" ></div>
+            <div class="swiper-slide"><img src="assets/img/slider5.jpg" ></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+</div>
+<!--轮播图结束-->
+
+<!--子菜单开始-->
+<div class="menu w">
+    <ul>
+        <li>
+            <div class="menu-nav">
+                <div class="menu-list">
+                    <span class="icon-facetime-video"></span>
+                </div>
+                <h4><a href="#/home_page">Movie</a></h4>
+            </div>
+        </li>
+        <li><div class="menu-nav">
+            <div class="menu-list">
+                <span class="icon-film"></span>
+            </div>
+            <h4><a href="#/in_theaters">Showing</a></h4>
+        </div></li>
+        <li><div class="menu-nav">
+            <div class="menu-list">
+                <span class="icon-dashboard"></span>
+            </div>
+            <h4><a href="#/coming_soon">Upcoming</a></h4>
+        </div></li>
+        <li><div class="menu-nav">
+            <div class="menu-list">
+                <span class=" icon-qrcode"></span>
+            </div>
+            <h4><a href="#/top250">Tops</a></h4>
+        </div></li>
+    </ul>
+
+
+
+
+    <div class="clearfix"> </div>
+</div>
+<!--子菜单结束-->
+
+<!--最新电影开始-->
+<div class="news w">
+    <div class="swiper-container" id="news">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" ng-repeat="item in data">
+                <div class="new-list-main" >
+                    <div class="main-pic">
+                        <a href="#/details/{{item.id}}">
+                            <img ng-src="{{item.images.large}}" alt="">
+                        </a>
+                    </div>
+                    <div class="main-info">
+                        <div class="main-infot"><span class="fl">{{item.title}}</span><em class="fr">{{item.rating.average}}分
+                        </em></div>
+                        <div class="main-infob fl">类型：<span>{{item.genres.join('、')}}</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+</div>
+<!--最新电影结束-->
+
+<!--底部开始-->
+<div class="footer w">
+    <div class="container">
+        <div class="foot-top">
+            <ul>
+                <li><a class="facebook" href="#"><i class="icon-facebook" aria-hidden="true"></i></a></li>
+                <li><a class="facebook" href="#"><i class="icon-twitter" aria-hidden="true"></i></a></li>
+                <li><a class="facebook" href="#"><i class="icon-dribbble" aria-hidden="true"></i></a></li>
+                <li><a class="facebook" href="#"><i class="icon-google-plus" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="foot-bot">
+            ©  2016   Emily Movie. All Rights Reserved | Design by Emily-Mei
+        </div>
+    </div>
+
+</div>
+<!--底部结束-->
+
+
